@@ -20,6 +20,22 @@ installation with the Divi theme and select plugins installed.
 - Prebuilt AMI - includes Wordpress, Divi, plugins
 
 
+
+# elb_cf_template.json
+
+Used to launch an ASG with multiple instances that will run on an Elastic
+Load Balanceer.
+
+- LaunchConfig with empty UserData
+
+- ElasticLoadBalancer with instance port listening at 80
+
+- ASG of size 2
+
+- Output ELB URL 
+
+
+
 # sinatra_elb_cf_template.json
 
 Used to launch an ASG with multiple instances that will run a Sinatra Ruby web
