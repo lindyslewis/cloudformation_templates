@@ -15,7 +15,7 @@
              "yum update -y\n",
              "yum install -y git\n",
              "su ec2-user\n",
-             "git clone https://github.com/lindyslewis/RubySinatraTraining.git /home/ec2-user/rubyApp\n",
+             "git clone https://github.com/lindyslewis/deploy_webapp.git /home/ec2-user/rubyApp\n",
              "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3\n",
              "curl -L https://get.rvm.io | bash -s stable --ruby=2.2.0\n",
              "source /usr/local/rvm/scripts/rvm\n",
@@ -26,7 +26,7 @@
       }
     },
 
-  
+
     "MyElasticLoadBalancer":{
         "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
         "Properties" : {
@@ -54,10 +54,10 @@
         }
      }
 },
-       
+
   "Outputs" : {
     "URL" : {
-      "Description" : "The URL of the Website",  
+      "Description" : "The URL of the Website",
       "Value" : { "Fn::Join" : [ "", [ "http://", { "Fn::GetAtt": [ "MyElasticLoadBalancer", "DNSName"]}]]}
     }
   }
