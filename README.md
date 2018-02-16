@@ -1,5 +1,8 @@
 # cloudformation_templates
 
+This repo is a collection of CloudFormation templates that I have created.
+
+
 # apache_website_cf_template.json
 
 Used to launch an ASG with instances that have git, apache, and a basic
@@ -32,7 +35,7 @@ Load Balanceer.
 
 - ASG of size 2
 
-- Output ELB URL 
+- Output ELB URL
 
 
 
